@@ -8,7 +8,7 @@ function newFunction( name, age, country){
 //es6
 
 function newFuction2(name="oscar", age=32, country="MX"){
-    console.log(name, age,country)
+    console.log(name, age,country);
 }
 newFuction2();
 newFuction2("ricardo","23",)
@@ -23,6 +23,7 @@ console.log(epicPhrase);
 // forma nueva 
 let epicPhrase2= `${hello} ${world}`;
 console.log(epicPhrase2);
+
 
 // multilinea
 
@@ -46,23 +47,13 @@ let person={
     "country":"CO"
 }
 
-console.log(person.name, person.age);
+console.log(person.name, person.age, person.country);
 
 //es6
 
-let {name,age}= person;
-console.log(name);
+let {name, age, country}= person;
+console.log(name,age,country);
 
-
-// functions
-
-function sayHi({
-    name, lastname}){
-    console.log("hi" + name + " " + lastname)
-}
-
-
-sayHi(person)
 
 // spread operator
 
@@ -108,33 +99,29 @@ console.log(obj2);
 //arrow functions
 
 const names=[
-    {name:"laura", age:32},
-    {name:"nelson", age:27}
+    {name:"laura", age:32, country:"CO"},
+    {name:"nelson", age:27,country:"CO"}
 ];
 
-let listOfNames= names.map(function(item){
+/* let listOfNames= names.map(function(item){
     console.log(item.name);
 });
 
 //arrow function es6
+let listOfNames2=names.map(item => console.log(item.name)); */
 
-let listOfNames2=names.map(item => console.log(item.name));
-
-//ejemplo2
-
-const listOfNames3=(name, age) =>{
-//codigo
+const listOfNames3= (name , age,country) =>{
+console.log(name, age, country)
 }
-
-//con un solo parametro
+listOfNames3("django",2,"CO")
 
 const listOfNames4=name => {
-    //codigo
+    console.log(name);
 }
+listOfNames4("laura")
 
-//otra opcion 
-const square= mum => num * mum;
-
+const square= num => num * num
+console.log(square(92));
 
 ///////////////////////////////////////////////////////////
 //promesas (asincronismo)
@@ -172,7 +159,6 @@ class calculator{
         return this.valueA + this.valueB;
     }
 }
-
 // se genera una constante
 
 const calc =new calculator();
@@ -203,7 +189,7 @@ hello();
 
 
 //generators
-//funcion especial que reurna una serie de valores segun el algoritmo
+//funcion especial que returna una serie de valores segun el algoritmo definido
 
 
 function* helloWorld(){

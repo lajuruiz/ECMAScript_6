@@ -1,13 +1,13 @@
 //object entries 
 ////Object entries devuelve los valores de una matriz
 
-const data={
+const datas={
     frontend:"laura",
     backend:"nelson",
     desing:"django",
 }
 
-const entries=Object.entries(data);
+const entries=Object.entries(datas);
 console.log(entries);
 console.log(entries.length)
 
@@ -37,7 +37,7 @@ console.log("food".padEnd(12,"******"));
 
 //Trailling 
 //Trailing comas, nos permite asignar elementos al objeto mediante comas.
-// se usa la coma para saber que se hay mas elementos
+// se usa la coma para saber que hay mas elementos
 
 const obj={
     name:"oscar",
@@ -46,10 +46,10 @@ const obj={
 
 //asyncc Await
 // se usa el if ternario
-// pprimera parte la promesa 
+// primera parte la promesa 
 const helloWorld=() =>{
     return new Promise((resolve,reject)=>{
-        (true)
+        ( true/* false o  true */)
             ? setTimeout(() => resolve("hello world"),3000)
             : reject(new Error("test error"))
     })
@@ -57,8 +57,9 @@ const helloWorld=() =>{
 
 // async await 
 
-const helloAsync=async() =>{
-    const hello=await helloWorld();
+const helloAsync = async() =>{
+    // se podrian generar mas variables const e invocar otras funciones.
+    const hello= await helloWorld();
     console.log(hello);
 }
 

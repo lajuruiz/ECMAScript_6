@@ -1,42 +1,58 @@
 ////Spread operator  ...
 
 const obj={
-    name:"laura",
+    namee:"laura",
     age:28,
     country:"Co",
 }
 
 //usamos operador de reposo
 
-let {name,...all}=obj;
+/* let {namee,...all}=obj;
+console.log(namee,all); */
+
+let {country,...all}=obj;
 console.log(all);
 
 
-//propiedades de propagacion
 
-const obj={
+//propiedades de propagacion: sirve para unir cuantos elementos queramos de varios objetos
+
+const obj0={
     name:"laura",
     age:28,
 }
 
 const obj1={
-    ...obj,
+    ...obj0,
     country:"Colombia",
 }
 
 console.log(obj1)
 
+
+
 // promise finally 
 
 // funcion y promesa 
 
-const helloWord= () =>{
+/* const helloWord= () =>{
     return new Promise((resolve, reject) => {
         (true)
         ? resolve("hello World")
         : reject(new Error("test error"))
     });
 };
+ */
+
+const helloWord= () =>{
+    return new Promise((resolve, reject) => {
+        (true)
+        ? setTimeout(() => resolve("hello World"), 3000)
+        : reject(new Error("test error"))
+    });
+};
+
 
 helloWord()
 .then(response => console.log(response))

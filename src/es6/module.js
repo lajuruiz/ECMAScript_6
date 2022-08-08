@@ -2,4 +2,4 @@ const hello = () => {
     return "helloooo!!"
 }
 
-export default hello
+export default hello;

@@ -14,11 +14,11 @@ if(numbers.includes(7)){
 
 
 // ejemplo 2
-let name=["hola","casas", "hello", "django"] ;
+let names=["hola","casas", "hello", "django"] ;
 // validar si el numero 7 esta incluido
 //para eso funciona este metodo 
 
-if(name.includes("hol")){
+if(names.includes("hol")){
     console.log("Si esta incluido")
 } else {
     console.log("no se encuentra")
